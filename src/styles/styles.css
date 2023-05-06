@@ -1,0 +1,224 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-family: TenbyFive;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  height: 100%;
+  margin: 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: whitesmoke;
+}
+img,
+h1,
+h2,
+h3 {
+  user-select: none;
+}
+p,
+h1,
+h2,
+h3 {
+  cursor: pointer;
+  margin: 0px;
+}
+header {
+  display: flex;
+  flex: 0 0 auto;
+  padding: min(1rem, 5vh);
+  height: min(75px, 20%);
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  font-weight: bold;
+  box-shadow: 0px 2px 0px 1px white;
+  background-color: #14279b;
+  color: #e6e6e6;
+}
+.header_span,
+.footer_span {
+  text-align: center;
+  user-select: none;
+}
+.header_icon {
+  color: #e6e6e6;
+  font-size: xx-large;
+  margin-right: 1vh;
+}
+footer {
+  display: flex;
+  flex: 0 0 auto;
+  height: min(75px, 20%);
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  box-shadow: 0px -2px 0px 1px white;
+  background-color: #14279b;
+  color: #e6e6e6;
+}
+.footer_icon {
+  color: #e6e6e6;
+  font-size: x-large;
+  margin-right: 1vh;
+}
+.footer_icon:hover {
+  color: white;
+  animation: spin 0.5s linear;
+}
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  height: 55vh;
+}
+.wrapper {
+  width: 25vw;
+}
+.misc-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  margin: 0 1rem;
+  width: 20vw;
+}
+.grid {
+  display: grid;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  height: 80%;
+}
+.cell {
+  background-color: rgb(0, 183, 255);
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+}
+.hoveredCell {
+  background-color: rgb(29, 233, 22);
+  cursor: pointer;
+}
+.ship-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.5rem;
+  height: 20%;
+}
+.ship-ico {
+  flex: 0 0 auto;
+  height: 50%;
+  width: 5rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+.log-wrapper {
+  height: 80%;
+  padding: 5px;
+  overflow: auto;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+.log-msg {
+  width: 100%;
+  font-family: TenbyFive;
+  font-size: medium;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  animation: colors 1s linear;
+}
+.btn-wrap {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: xx-large;
+}
+.btn-wrap:hover * {
+  cursor: pointer;
+  animation: spin 0.5s linear;
+}
+.overlay {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000000b3;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  position: relative;
+  margin: 25vh auto;
+  padding: 2rem;
+  background: #14279b;
+  border-radius: 5px;
+  width: 30vw;
+  transition: all 0.5s ease-in-out;
+  color: #e6e6e6;
+}
+.close_button {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  transition: all 0.2s;
+  font-size: xx-large;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+.close_button:hover {
+  color: lightcoral;
+}
+.popup_content {
+  margin-top: 1rem;
+  text-align: justify;
+}
+.clear {
+  clear: both;
+}
+.invisible {
+  opacity: 0;
+}
+@font-face {
+  font-family: "TenbyFive";
+  src: url("../fonts/tenby-five-webfont.otf"),
+    url("../fonts/tenby-five-webfont.eot"),
+    url("../fonts/tenby-five-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/tenby-five-webfont.woff2") format("woff2"),
+    url("../fonts/tenby-five-webfont.woff") format("woff"),
+    url("../fonts/tenby-five-webfont.ttf") format("truetype"),
+    url("../fonts/tenby-five-webfont.svg#TenbyFive") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes colors {
+  0% {
+    background-color: lightyellow;
+  }
+  100% {
+    background-color: whitesmoke;
+  }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Battleship</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="<%= require('./img/favicon.ico') %>"
+    />
+    <script
+      src="https://kit.fontawesome.com/1f69cd3395.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <i class="fa fa-anchor header_icon"></i>
+      <span class="header_span">Battleship</span>
+    </header>
+    <div class="main-wrapper">
+      <div class="wrapper">
+        <div class="grid p1g"></div>
+        <div class="ship-wrap p1sw">
+          <img
+            class="ship-ico"
+            src="<%= require('./img/B-Ship-1.png') %>"
+            alt="0-porta-aviones"
+          />
+          <img
+            class="ship-ico"
+            src="<%= require('./img/B-Ship-2.png') %>"
+            alt="1-acorazado"
+          />
+          <img
+            class="ship-ico"
+            src="<%= require('./img/B-Ship-3.png') %>"
+            alt="2-destructor"
+          />
+          <img
+            class="ship-ico"
+            src="<%= require('./img/B-Ship-4.png') %>"
+            alt="3-submarino"
+          />
+          <img
+            class="ship-ico"
+            src="<%= require('./img/B-Ship-5.png') %>"
+            alt="4-bote-patrulla"
+          />
+        </div>
+      </div>
+      <div class="misc-wrapper">
+        <div class="log-wrapper">
+          <div class="log-msg">
+            Inicia un nuevo juego, clickea en los botes azules para girarlos y
+            colocalos clicando la matriz izquierda.
+          </div>
+        </div>
+        <div class="btn-wrap">
+          <i class="fa fa-arrow-rotate-right restart-btn"></i>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="grid p2g"></div>
+        <div class="ship-wrap p2sw">
+          <img
+            class="ship-ico"
+            src="<%= require('./img/G-Ship-1.png') %>"
+            alt="0-porta-aviones"
+          />
+          <img
+            class="ship-ico"
+            src="<%= require('./img/G-Ship-2.png') %>"
+            alt="1-acorazado"
+          />
+          <img
+            class="ship-ico"
+            src="<%= require('./img/G-Ship-3.png') %>"
+            alt="2-destructor"
+          />
+          <img
+            class="ship-ico"
+            src="<%= require('./img/G-Ship-4.png') %>"
+            alt="3-submarino"
+          />
+          <img
+            class="ship-ico"
+            src="<%= require('./img/G-Ship-5.png') %>"
+            alt="4-bote-patrulla"
+          />
+        </div>
+      </div>
+    </div>
+    <a class="popup_button" href="#popup" hidden></a>
+    <div id="popup" class="overlay">
+      <div class="popup">
+        <h2 class="popup_header"></h2>
+        <a class="close_button" href="#">&times;</a>
+        <p class="popup_content"></p>
+      </div>
+    </div>
+    <footer>
+      <a href="https://github.com/Jgoldenusr"
+        ><i class="fab fa-github footer_icon"></i
+      ></a>
+      <span class="footer_span">Copyright © 2023 Jgoldenusr</span>
+    </footer>
+  </body>
+</html>
